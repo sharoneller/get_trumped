@@ -1,0 +1,12 @@
+<h1><%= @issue.name %></h1>
+<ul>
+
+
+<p><%= randomize_quote(params[:id]) %></p>
+
+ 
+</ul>
+<%= link_to("All Issues", root_path) %>
+
+<%= link_to "Quotes", issue_quotes_path(@quote) %>
+

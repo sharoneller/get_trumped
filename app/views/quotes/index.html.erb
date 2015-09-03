@@ -1,0 +1,16 @@
+<header id="content-header">
+  <h1>Quotes for <%= link_to(@issue.name, @issue) %></h1>
+</header>
+
+<ol>
+  <% @quotes.each do |quote| %>
+    <li>
+      <p>
+        <%= quote.phrase %> by Candidate # <%= quote.candidate_id %>:
+      </p> 
+      <p>
+        <%= quote.date %>
+      </p>
+    </li>
+  <% end %>
+</ol>

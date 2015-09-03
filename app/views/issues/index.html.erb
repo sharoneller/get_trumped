@@ -1,0 +1,18 @@
+<h1>Welcome!</h1>
+
+<h2>Are you ready to play "Get Trumped"?</h2> 
+<h3>When you choose an issue, you will see a recent quote from one of the 2016 Presidential candidates. If you are lucky, you might get "Trumped", but you could also be "Hit by Hillary" or "Burned by Bush"!</h3>
+
+
+<p>
+	Please click on one of the current issues.
+</p>
+ 
+<ul>
+<% @issues.each do |issue| %>
+	<li>
+		<strong><%= link_to issue.name, issue %></strong>
+	</li>
+	<% end %>
+</ul>
+
