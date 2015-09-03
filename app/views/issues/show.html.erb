@@ -6,7 +6,12 @@
 
  
 </ul>
-<%= link_to("All Issues", root_path) %>
 
-<%= link_to "Quotes", issue_quotes_path(@quote) %>
+
+
+<%= link_to "Play Again", url_for(params) %> |
+
+<%= link_to("All Issues", root_path) %> |
+
+<%= link_to "All Quotes for this issue", issue_quotes_path(@quote) %>
 
