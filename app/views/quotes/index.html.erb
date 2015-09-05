@@ -6,8 +6,11 @@
   <% @quotes.each do |quote| %>
     <li>
       <p>
-        <%= quote.phrase %> by Candidate # <%= quote.candidate_id %>:
+        " <%= quote.phrase %> " 
       </p> 
+      <p>
+         ~ <%= Candidate.find(quote.candidate_id).name %>
+      </p>
       <p>
         <%= quote.date %>
       </p>
@@ -15,4 +18,5 @@
   <% end %>
 </ol>
 
-<%= link_to("All Issues", root_path) %> 
+<%= link_to "All Issues", root_path, :class=>"myButton" %> 
+<%= render 'quotes/footer' %>

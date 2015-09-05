@@ -1,0 +1,22 @@
+<%= link_to "Play Again", url_for(params) %> |
+
+<%= link_to("All Issues", root_path) %> |
+
+<%= link_to "All Quotes for this issue", issue_quotes_path(@quote) %>
+
+<%= render 'footer' %>
+
+<aside id="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <%= link_to "Play Again", url_for(params) %> 
+      </li>
+
+      <li>
+        <%= link_to "Show All Recommendations", recommendations_show_all_recommendations_path, class: "my-btn my-btn-primary"  %>
+      </li>
+
+    </ul>
+  </nav>
+</aside>

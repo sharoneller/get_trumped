@@ -9,10 +9,15 @@
 </p>
  
 <ul>
-<% @issues.each do |issue| %>
-	<li>
-		<strong><%= link_to issue.name, issue %></strong>
-	</li>
+<% @issues.first(10).each do |issue| %>
+	<p>
+		<strong><%= link_to issue.name, issue, class: "my-btn my-btn-primary" %></strong>
+	</p>
 	<% end %>
 </ul>
+
+<%= render 'footer' %>
+
+
+
 

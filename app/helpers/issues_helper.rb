@@ -1,20 +1,4 @@
 module IssuesHelper
-=begin
-	def play_trump(issue_id)
-		if issue_id == "3" 
-			content_tag(:strong, "You've been Trumped!")
-		elsif issue_id == "2"
-			content_tag(:strong, "You've been Hit by Hillary!")
-		else 
-			content_tag(:strong, "You've been Bushwacked!" + issue_id)
-		end
-	end
-=end	
-
-#########ALTERNATIVE#########
-
-
-
 
 # I want to make this game random.
 # The user will click on an issue.
@@ -23,8 +7,6 @@ module IssuesHelper
 # I need to use the rand method on the quotes.
 # I need a conditional statement, if candidate_id == Trump, 
 #then return "You've been Trumped!" 
-
-#################  Sample Code  #################
 
 
 
@@ -43,41 +25,23 @@ module IssuesHelper
 
  def candidate_hit(quot)
 	candidate_name = Candidate.find(quot.candidate_id).name
-puts candidate_name + " haha " + quot.phrase
+	puts candidate_name + " haha " + quot.phrase
 		if quot.candidate_id == 1
-			content_tag(:strong, "You've been Trumped! " + quot.phrase)
+			content_tag(:strong, "You've been Trumped! " ) +
+			tag("br") + quot.phrase
 		elsif quot.candidate_id == 2
-			content_tag(:strong, "You've been Hit by Hillary! " + quot.phrase)
+			content_tag(:strong, "You've been Hit by Hillary! " ) +
+			tag("br") + quot.phrase
 		elsif quot.candidate_id == 3
-			content_tag(:strong, "You've been Burned by Burnie! " + quot.phrase)
+			content_tag(:strong, "You've been Burnietized! " ) +
+			tag("br") + quot.phrase
 		else 
-			content_tag(:strong, "You've been Bushwacked! " + quot.phrase)
+			content_tag(:strong, "You've been Bushwacked! " ) +
+			tag("br") + quot.phrase
 		end
 	end
 
 end
 
-#def play_get_trumped(candidate_id)
-# 	if candidate_id == "1"
-#     content_tag(:strong, "You've been Trumped!")
-#   elsif candidate_id == "2"
-#			content_tag(:strong, "You've been Hit by Hillary!")
-#		else 
-#			content_tag(:strong, "You've been Bushwacked!" + issue_id)
-#		end
-#	end
-##### OR ###########
-#  case candidate_id
-#    when "1"
-#       content_tag(:strong, "You've been Trumped!")
-#    when "2"
-#       content_tag(:strong, "You've been Hit by Hillary!") 
-#    when "3"
-#       content_tag(:strong, "You've been Burned by Bernie!" + issue_id)
-#    when "4"
-#       content_tag(:strong, "You've been Bushwacked!" + issue_id)
-#    else
-#       content_tag(:strong, "Please try again!" + issue_id)
-#  end
 
 

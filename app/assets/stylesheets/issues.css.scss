@@ -1,3 +1,156 @@
-// Place all the styles related to the issues controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
+
+div {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, li, p {
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+}
+
+h1, h2, h3, h4, h5, li, p {
+  text-align: center;
+}
+
+
+/* Mixins */
+@mixin btn-theme($btn-color) {
+  background: $btn-color;
+  border-color: darken($btn-color, 10%);
+}
+@mixin btn-theme-hover($btn-color, $hover-color: "") {
+  @if $hover-color == "" {
+    $hover-color: saturate($btn-color, 10%);
+    $hover-color: darken($hover-color, 10%)
+  }
+  background: $hover-color;
+  border-color: darken($btn-color, 20%);
+}
+@mixin btn-theme-disabled($btn-color) {
+  background: lighten($btn-color, 20%);
+  border-color: lighten($btn-color, 10%);
+}
+
+/* Primary button class with default color (orange) */
+.my-btn {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  border:1px solid;
+  text-decoration: none;
+
+  color: $btn-color;
+  @include btn-theme($btn-default);
+}
+.my-btn:hover {
+  color: $btn-color;
+  text-decoration: none; 
+  @include btn-theme-hover($btn-default);
+ }
+.my-btn.disabled, .my-btn.disabled:hover {
+  -webkit-user-select: none;
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .65;
+  @include btn-theme-disabled($btn-default);
+}
+
+
+/* Different versions of the button (extending) */
+.my-btn.my-btn-primary {
+  @include btn-theme($btn-primary);
+}
+.my-btn.my-btn-primary:hover {
+  @include btn-theme-hover($btn-primary);
+}
+.my-btn.my-btn-primary.disabled, .my-btn.my-btn-primary.disabled:hover {
+  @include btn-theme-disabled($btn-primary);
+}
+
+.my-btn.my-btn-grey {
+  @include btn-theme($btn-grey);
+}
+.my-btn.my-btn-grey:hover {
+  @include btn-theme-hover($btn-grey, $btn-grey-hover);
+}
+.my-btn.my-btn-grey.disabled, .my-btn.my-btn-grey.disabled:hover {
+  @include btn-theme-disabled($btn-grey);
+}
+
+.my-btn.my-btn-danger {
+  @include btn-theme($btn-danger)
+}
+.my-btn.my-btn-danger:hover {
+  @include btn-theme-hover($btn-danger);
+}
+.my-btn.my-btn-danger.disabled, .my-btn.my-btn-danger.disabled:hover {
+  @include btn-theme-disabled($btn-danger);
+}
+
+
+
+/* This is for the page links */
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
