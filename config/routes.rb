@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
- get 'root' => "issues#index"
+ root "issues#index"
  
   resources :issues do
 	resources :quotes
