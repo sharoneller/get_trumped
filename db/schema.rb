@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831183733) do
+ActiveRecord::Schema.define(version: 20150906152852) do
 
   create_table "candidates", force: true do |t|
     t.string   "name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150831183733) do
   end
 
   create_table "quotes", force: true do |t|
-    t.string   "phrase"
+    t.text     "phrase",       limit: 255
     t.date     "date"
     t.integer  "issue_id"
     t.integer  "candidate_id"
