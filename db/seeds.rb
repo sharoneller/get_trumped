@@ -1,7 +1,71 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Candidate.create!([
+  {name: "Donald Trump", issue_id: 1},
+  {name: "Hillary Clinton", issue_id: nil},
+  {name: "Bernie Sanders", issue_id: nil},
+  {name: "Jeb Bush", issue_id: nil}
+])
+Issue.create!([
+  {name: "Immigration"},
+  {name: "Corporate Welfare"},
+  {name: "Job Creation"},
+  {name: "Gun Control"},
+  {name: "Health Care"},
+  {name: "Environmental Concerns"},
+  {name: "Foreign Policy"},
+  {name: "Education"},
+  {name: "Taxes"},
+  {name: "Same Sex Marriage"},
+  {name: "Economy"},
+  {name: "Climate Change"},
+  {name: "Washington Culture"},
+  {name: "Terrorism"},
+  {name: "Wealth Distribution"},
+  {name: "Race Relations"},
+  {name: "Moral Decline"},
+  {name: "Poverty/Homelessness"},
+  {name: "Dissatisfaction with Government"},
+  {name: "Abortion"},
+  {name: "Equal Pay for Women"}
+])
+Quote.create!([
+  {phrase: "I will build a great wall — and nobody builds walls better than me, believe me —and I’ll build them very inexpensively. I will build a great, great wall on our southern border, and I will make Mexico pay for that wall. Mark my words.", date: "2015-08-15", issue_id: 1, candidate_id: 1},
+  {phrase: "It would be a bad idea to let people go to bars with guns, let them go to schools with guns, let them go to church with guns.", date: "2015-05-15", issue_id: 4, candidate_id: 2},
+  {phrase: "Today, the United States is No.1 in corporate profits, No. 1 in CEO salaries, No.1 in childhood poverty and No.1 in income and wealth inequality in the industrialized nations.", date: "2015-06-01", issue_id: 2, candidate_id: 3},
+  {phrase: "The federal government shouldn't be involved in gun laws because the country's very different.", date: "2015-09-01", issue_id: 4, candidate_id: 4},
+  {phrase: "Gun control does not reduce crime. It has consistantly failed to reduce violence.", date: "2015-07-10", issue_id: 4, candidate_id: 1},
+  {phrase: "I think urban America has got to respect what rural America is about, where 99 percent of the people in my state who hunt are law abiding people.", date: "2015-06-24", issue_id: 4, candidate_id: 3},
+  {phrase: "I've used bankruptcy laws to do a great job for my companies.", date: "2000-07-01", issue_id: 2, candidate_id: 1},
+  {phrase: "I will be the greatest jobs president that God ever created.", date: "2015-06-01", issue_id: 3, candidate_id: 1},
+  {phrase: "You know why doctors don't make house calls anymore? That's right, Obamacare!", date: "2014-06-05", issue_id: 5, candidate_id: 1},
+  {phrase: "This very expensive GLOBAL WARMING bull\#$%* has got to stop. Our planet is freezing, record low temps, and our GW scientists are stuck in ice.", date: "2014-01-01", issue_id: 6, candidate_id: 1},
+  {phrase: "I've got no time to travel - America needs my attention now.", date: "2015-08-25", issue_id: 7, candidate_id: 1},
+  {phrase: "I am totally against Common Core. That's a disaster. That's bad. It should be local and all of that.", date: "2015-01-15", issue_id: 8, candidate_id: 1},
+  {phrase: "My 5-part tax plan involves reforming the income tax. It's clear and fair. Best of all, it can be filled out on the back of a postcard.", date: "2011-12-05", issue_id: 9, candidate_id: 1},
+  {phrase: "Its not my thing.", date: "2013-02-07", issue_id: 10, candidate_id: 1},
+  {phrase: "Immigration helps keep the US population young and dynamic at a time when our partners and competitors are aging.", date: "2014-06-10", issue_id: 1, candidate_id: 2},
+  {phrase: "We’ll stop the giveaways to big oil companies and extend, instead, tax incentives for clean energy, while making them more cost-effective for both taxpayers and producers.", date: "2015-07-01", issue_id: 2, candidate_id: 2},
+  {phrase: "Don’t let anybody tell you that it’s corporations and businesses that create job", date: "2014-10-24", issue_id: 3, candidate_id: 2},
+  {phrase: "Health insurance should be affordable and available across the country and the Republican attacks need to end.", date: "2015-06-25", issue_id: 5, candidate_id: 2},
+  {phrase: "The science of climate change is unforgiving, no matter what the deniers may say. Sea levels are rising; ice caps are melting.", date: "2014-12-01", issue_id: 6, candidate_id: 2},
+  {phrase: "Higher education should be a right, not a privilege for those who can afford it.", date: "2015-08-11", issue_id: 8, candidate_id: 2},
+  {phrase: "We’re going to take things away form you on behalf of the common good.", date: "2007-06-04", issue_id: 9, candidate_id: 2},
+  {phrase: "THEN(2000) - 'I think a marriage is as a marriage has always been, between a man and a woman'and NOW - 'Every loving couple & family deserves to be recognized & treated equally under the law across our nation'", date: "2015-07-14", issue_id: 10, candidate_id: 2},
+  {phrase: "We can't go back to cowboy diplomacy and reckless war-mongering. We need a foreign policy for the future", date: "2015-07-31", issue_id: 7, candidate_id: 2},
+  {phrase: "Undocumented workers build many of our homes, cook our meals, maintain our landscapes. We even entrust undocumented workers with that which we hold most dear – our children.", date: "2015-06-19", issue_id: 1, candidate_id: 3},
+  {phrase: "The largest private sector employer in the United States used to be General Motors, which paid unionized workers good wages and good benefits. Today the largest private-sector employer is Wal-Mart, which opposes unionization and pays low wages with minimal benefits. For the sake of our kids, this path downward must be reversed.", date: "2014-01-15", issue_id: 3, candidate_id: 3},
+  {phrase: "If the goal of health care reform is to provide comprehensive, universal health care in a cost-effective way, the only honest approach is a single-payer approach.", date: nil, issue_id: 5, candidate_id: 3},
+  {phrase: "If the environment were a bank, it would have been saved already.", date: "2015-01-23", issue_id: 6, candidate_id: 3},
+  {phrase: "I think using our military is an option, obviously, that we will always have under certain circumstances, but it is the last option.", date: "2015-08-30", issue_id: 7, candidate_id: 3},
+  {phrase: "In my view, the most revolting aspect of the student loan crisis is that every year, the federal government makes billions of dollars in profits off of student loans – $127 billion over 10 years, according to the Congressional Budget Office.", date: "2015-04-30", issue_id: 8, candidate_id: 3},
+  {phrase: "It is not acceptable that major profitable corporations have paid nothing in federal income taxes, and that corporate CEOs in this country often enjoy an effective tax rate which is lower than their secretaries.", date: "2015-03-21", issue_id: 9, candidate_id: 3},
+  {phrase: "Of course all citizens deserve equal rights.It's time for the Supreme Court to catch up to the American people and legalize gay marriage.", date: nil, issue_id: 10, candidate_id: 3},
+  {phrase: "I believe that the great majority of people coming here illegally have no other option. They want to provide for their family.", date: "2015-08-06", issue_id: 1, candidate_id: 4},
+  {phrase: "Jeb Bush on Citizens United decision: 'I don't really understand it to be honest with you.'", date: "2015-05-29", issue_id: 2, candidate_id: 4},
+  {phrase: "But the federal government raising minimum wage will make it harder and harder for the first rung of the ladder to be reached, particularly for young people, particularly for people that have less education.", date: "2015-07-16", issue_id: 3, candidate_id: 4},
+  {phrase: "Obamacare is a monstrosity of consolidating power in Washington, D.C.", date: "2015-03-13", issue_id: 5, candidate_id: 4},
+  {phrase: "I'm a skeptic, not a Scientist.", date: nil, issue_id: 6, candidate_id: 4},
+  {phrase: "Jeb Bush said that his brother’s successful overthrow of Iraqi dictator Saddam Hussein 'turned out to be a pretty good deal'", date: "2015-08-17", issue_id: 7, candidate_id: 4},
+  {phrase: "It’s time to challenge the 13,000-plus government-run, politicized monopolies we call school districts that focus too much on the economic interest of the adults and not enough on student learning.", date: nil, issue_id: 8, candidate_id: 4},
+  {phrase: "Bush did not give a lot of details about his plan, but said the idea would be to 'lower the rates, corporate rates and personal rates, as low as you possibly can, eliminating as many of the deductions as you can.'", date: "2015-09-03", issue_id: 9, candidate_id: 4},
+  {phrase: "I believe the Supreme Court should have allowed the states to make this decision.", date: "2015-06-26", issue_id: 10, candidate_id: 4}
+])
