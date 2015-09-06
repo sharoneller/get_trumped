@@ -9,10 +9,10 @@
 
 
 
-<%= link_to "Play Again", url_for(params), :class=>"myButton" %> |
+<%= link_to "Play Again", url_for(params), class: "myButton" %> |
 
-<%= link_to "All Issues", root_path, :class=>"myButton" %> |
+<%= link_to "All Issues", root_path, class: "myButton" %> |
 
-<%= link_to "All Quotes for this issue", issue_quotes_path(@quote), :class=>"myButton" %>
+<%= link_to "All Quotes for this issue", issue_quotes_path(@quote), class: "myButton" %>
 
 <%= render 'footer' %>
