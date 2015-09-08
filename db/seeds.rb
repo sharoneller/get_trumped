@@ -1,8 +1,11 @@
+Candidate.delete_all()
+Issue.delete_all()
+Quote.delete_all()
 Candidate.create!([
-  {name: "Donald Trump", issue_id: 1},
-  {name: "Hillary Clinton", issue_id: nil},
-  {name: "Bernie Sanders", issue_id: nil},
-  {name: "Jeb Bush", issue_id: nil}
+  {name: "Donald Trump", issue_id: 1, image_file_name: "trump.jpg"},
+  {name: "Hillary Clinton", issue_id: nil, image_file_name: "clinton.jpg"},
+  {name: "Bernie Sanders", issue_id: nil, image_file_name: "sanders.jpg"},
+  {name: "Jeb Bush", issue_id: nil, image_file_name: "bush.jpg"}
 ])
 Issue.create!([
   {name: "Immigration"},
@@ -49,7 +52,7 @@ Quote.create!([
   {phrase: "The science of climate change is unforgiving, no matter what the deniers may say. Sea levels are rising; ice caps are melting.", date: "2014-12-01", issue_id: 6, candidate_id: 2},
   {phrase: "Higher education should be a right, not a privilege for those who can afford it.", date: "2015-08-11", issue_id: 8, candidate_id: 2},
   {phrase: "We’re going to take things away form you on behalf of the common good.", date: "2007-06-04", issue_id: 9, candidate_id: 2},
-  {phrase: "THEN(2000) - 'I think a marriage is as a marriage has always been, between a man and a woman'and NOW - 'Every loving couple & family deserves to be recognized & treated equally under the law across our nation'", date: "2015-07-14", issue_id: 10, candidate_id: 2},
+  {phrase: "THEN(2000)I think a marriage is as a marriage has always been, between a man and a woman'and NOW(2015) - Every loving couple & family deserves to be recognized & treated equally under the law across our nation.", date: "2015-07-14", issue_id: 10, candidate_id: 2},
   {phrase: "We can't go back to cowboy diplomacy and reckless war-mongering. We need a foreign policy for the future", date: "2015-07-31", issue_id: 7, candidate_id: 2},
   {phrase: "Undocumented workers build many of our homes, cook our meals, maintain our landscapes. We even entrust undocumented workers with that which we hold most dear – our children.", date: "2015-06-19", issue_id: 1, candidate_id: 3},
   {phrase: "The largest private sector employer in the United States used to be General Motors, which paid unionized workers good wages and good benefits. Today the largest private-sector employer is Wal-Mart, which opposes unionization and pays low wages with minimal benefits. For the sake of our kids, this path downward must be reversed.", date: "2014-01-15", issue_id: 3, candidate_id: 3},
