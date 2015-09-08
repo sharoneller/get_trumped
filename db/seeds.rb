@@ -1,6 +1,4 @@
-Candidate.delete_all()
-Issue.delete_all()
-Quote.delete_all()
+
 Candidate.create!([
   {name: "Donald Trump", issue_id: 1, image_file_name: "trump.jpg"},
   {name: "Hillary Clinton", issue_id: nil, image_file_name: "clinton.jpg"},
