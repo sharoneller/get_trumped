@@ -10,4 +10,6 @@ class IssuesController < ApplicationController
 # 	@candidate = Candidate.find(params[:id])
 
   end
+
+ 
 end

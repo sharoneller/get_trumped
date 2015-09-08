@@ -28,16 +28,22 @@ module IssuesHelper
 	puts candidate_name + " haha " + quot.phrase
 		if quot.candidate_id == 1
 			content_tag(:strong, "You've been Trumped! " ) +
-			tag("br") + quot.phrase
+			tag("br") + content_tag(:strong, "Trump said:  " ) + quot.phrase +
+			tag("br") + image_tag(Candidate.find(quot.candidate_id).image_file_name)
+
 		elsif quot.candidate_id == 2
 			content_tag(:strong, "You've been Hit by Hillary! " ) +
-			tag("br") + quot.phrase
+			tag("br") + content_tag(:strong, "Hillary said:  " ) + quot.phrase +
+			tag("br") + image_tag(Candidate.find(quot.candidate_id).image_file_name)
+
 		elsif quot.candidate_id == 3
-			content_tag(:strong, "You've been Burnietized! " ) +
-			tag("br") + quot.phrase
+			content_tag(:strong, "You've been Burnied! " ) +
+			tag("br") + content_tag(:strong, "Bernie said:  " ) + quot.phrase +
+			tag("br") + image_tag(Candidate.find(quot.candidate_id).image_file_name)
 		else 
 			content_tag(:strong, "You've been Bushwacked! " ) +
-			tag("br") + quot.phrase
+			tag("br") + content_tag(:strong, "Bush said:  " ) + quot.phrase +
+			tag("br") + image_tag(Candidate.find(quot.candidate_id).image_file_name)
 		end
 	end
 

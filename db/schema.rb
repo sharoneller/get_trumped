@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906152852) do
+ActiveRecord::Schema.define(version: 20150908141042) do
 
   create_table "candidates", force: true do |t|
     t.string   "name"
     t.integer  "issue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
   end
 
   add_index "candidates", ["issue_id"], name: "index_candidates_on_issue_id"

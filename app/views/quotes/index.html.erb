@@ -11,9 +11,15 @@
       <p>
          ~ <%= Candidate.find(quote.candidate_id).name %>
       </p>
+
+      <p>
+         <%= image_tag(Candidate.find(quote.candidate_id).image_file_name) %>
+      </p>
+
       <p>
         <%= quote.date %>
       </p>
+      
     </li>
   <% end %>
 </ol>
